@@ -1,0 +1,51 @@
+.banner-section {
+    min-height: 100vh;
+    margin-top: 85px;
+    background: url('../images/first-section.jpg');
+    background-size: cover;
+    background-position: center center;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+.banner-container {
+    width: 90vw;
+    padding: 10px;
+    // background-color: rgb(236, 40, 26);
+    h1 {
+        font-size: calculateRem(30px);
+        color: $white_clr;
+    }
+}
+.btn-group {
+    padding: 10px;
+    // background-color: bisque;
+    .btn {
+        font-size: calculateRem(16px);
+        width: 150px;
+        height: 40px;
+        margin: 10px;
+        color: $white_clr;
+    }
+}
+.btn-orange {
+    background-color: $header_bkg;
+}
+.btn-transparent {
+    background-color: transparent;
+}
+
+
+// Responsive 
+@media screen and (min-width: 991px) {
+    .banner-container {
+        width: 35vw;
+        // max-width: 1200px;
+        h1 {
+            font-size: calculateRem(40px);
+        }
+    }
+    .btn-group .btn {
+        margin: 0;
+    }
+}

@@ -1,0 +1,121 @@
+.third-section {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 33;
+    // background-color: darkcyan;
+}
+.third-section::before {
+    content: '';
+    width: 100vw;
+    height: 2900px;
+    position: absolute;
+    top: 78px;
+    left: 0;
+    background-color: $header_bkg;
+    -ms-transform: skewY(-5deg);
+    transform: skewY(-5deg);
+}
+.third-section .title {
+    width: 100%;
+    color: #000;
+    font-weight: bold;
+    position: absolute;
+    top: 55px;
+    -ms-transform: skewY(0);
+    transform: skewY(0);
+    // background-color: rgb(47, 158, 231);
+}
+.third-content {
+    width: 90vw;
+    margin: 0 auto;
+    display: grid;
+    column-gap: 10px;
+    row-gap: 5px;
+    position: relative;
+    top: 200px;
+    -ms-transform: skewY(0);
+    transform: skewY(0);
+}
+.third-column {
+    max-width: 250px;
+    height: 430px;
+    margin: 0 auto 20px;
+    // background-color: transparent;
+    // background-color: darkorchid;
+}
+.third-column-left {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    img {
+        max-width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+}
+.third-column-right {
+    text-align: center;
+    color: $white_clr;
+    h3 {
+        font-size: calculateRem(16px);
+    }
+    p {
+        margin-bottom: 10px;
+    }
+}
+
+
+/* Responsive */
+@media screen and (min-width: 767px) {
+    .third-section::before {
+        height: 1600px;
+        top: 52px;
+    }
+    .third-section .title {
+        font-size: calculateRem(30px);
+        top: 15px;
+    }
+    .third-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 991px) {
+    .third-section::before {
+        height: 1150px;
+    }
+    .third-content {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1199px) {
+    .third-section::before {
+        height: 1000px;
+    }
+    .third-content {
+        max-width: 1200px;
+        grid-template-columns: 1fr 1fr;
+    }
+    .third-column {
+        max-width: 550px;
+        height: 250px;
+        display: flex;
+        flex-direction: row;
+        padding-top: 15px;
+    }
+    .third-column-left {
+        justify-content: space-between;
+        img {
+            margin-left: 10px 10px 0 0;
+        }
+    }
+    .third-column-right {
+        max-width: 320px;
+        text-align: left;
+        margin: 25px 10px;
+        // background-color: darkred;
+    }
+}

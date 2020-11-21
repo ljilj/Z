@@ -1,0 +1,19 @@
+body {
+    font-family: $main_font;
+    background: $main_background;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+img:not(.sun-logo) {
+    width: 100%;
+}
+img {
+    display: block;
+}
+.title {
+    text-align: center;
+}

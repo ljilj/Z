@@ -1,0 +1,68 @@
+header {
+    position: fixed;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    top: 0;
+    z-index: 135;
+    background-color: $header_bkg;
+}
+.center-x {
+    display: flex;
+    justify-content: center;
+}
+.center-y {
+    display: flex;
+    align-items: center;
+}
+nav {
+    width: 90vw;
+    text-align: center;
+    // background-color: violet;
+    a {
+        color: $white_clr;
+    }
+}
+.nav-header {
+    margin-bottom: 20px;
+    .sun-logo {
+        margin: 0 auto;
+    }
+}
+
+// Responsive 
+@media screen and (min-width: 991px) {
+    header {
+        height: 85px;
+    }
+    .strech {
+        display: flex;
+        justify-content: space-between;
+    }
+    nav {
+        max-width: 1200px;
+    }
+    .nav-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+        // background-color: wheat;
+    }
+    .links {
+        display: flex;
+        a {
+            padding: 32px 30px 28px;
+            font-size: calculateRem(16px);
+        }
+    }
+    // za current border-bottom obratiti paznju na padding u .links a
+    .current {
+        border-bottom: 4px solid $white_clr;
+    }
+    header .strech {
+        align-items: center;
+    }
+    header .strech a {
+        line-height: 1;
+    }
+}
