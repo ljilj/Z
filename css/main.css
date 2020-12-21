@@ -36,7 +36,8 @@ header {
 
 nav {
   width: 90vw;
-  text-align: center; }
+  text-align: center;
+  background-color: violet; }
   nav a {
     color: #fff; }
 
